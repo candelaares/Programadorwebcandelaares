@@ -23,7 +23,7 @@ router.post('/', async (req, res, next) => {
     html: nombre + " " + apellido + " se contacto a través de la web y quiere más información a este correo : " + mensaje + ". <br> Su tel es: " + tel
   }
 
-  var trasnport = nodemailer.createTransport({
+  var trasnporter = nodemailer.createTransport({
     host: process.env.SMTP_HOST,
     port: process.env.SMTP_PORT,
     auth: {
