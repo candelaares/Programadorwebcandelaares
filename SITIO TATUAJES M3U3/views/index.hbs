@@ -11,9 +11,9 @@
 </div>
 <!--Inicio Tipo de tatuajes-->
 <div class="row my-3">
-    <div id="Tipo de tatuajes" class="col-md-5 offset-md-2 scroll_section">
+    <div id="tipo de tatuajes" class="col-md-5 offset-md-2 scroll_section">
         <h2>Tipos de tatuajes</h2>
-        <ul class="lista-novedades">
+        <ul class="tipo-tatuajes">
             <li><a href="#" data-bs-toggle="modal" data-bs-target="#exampleModal"><img
                         src="images/tipos1.jpg">Realistas</a></li>
             <li><a href="#" data-bs-toggle="modal" data-bs-target="#exampleModal1"><img
@@ -142,7 +142,8 @@
                 <div class="modal-body">
                     <p>Los tatuajes tribales son el estilo de tatuaje más antiguo dentro del mundo de la tinta.
                         Principalmente las tribus aborígenes optaban por este tipo de tatuajes para marcar su status
-                        social o mostrar a qué clan o nivel de guerrero pertenecían. Los hombres, desde el inicio de este estilo, son los que más hacen uso de los tatuajes tribales,
+                        social o mostrar a qué clan o nivel de guerrero pertenecían. Los hombres, desde el inicio de
+                        este estilo, son los que más hacen uso de los tatuajes tribales,
                         eligiendo zonas como los brazos, las piernas y los hombros. Sin embargo, las mujeres también
                         suelen ser amantes de esta forma.</p>
                 </div>
@@ -276,6 +277,39 @@
         </div>
     </div>
 </div>
+<!--novedades con modal-->
+<div class="row my-3">
+    <div id="novedades" class="col-md-5 offset-md-2 scroll_section">
+        <h2>Novedades</h2>
+        <ul class="lista-novedades">
+            {{#each novedades}}
+            <li>
+                <a href="#" data-bs-toggle="modal" data-bs-target="#exampleModal6{{id}}"><img src="images/novedades.jpg">{{titulo}}</a>
+            </li>
+            {{/each}}
+        </ul>
+    </div>
+</div>
+{{#each novedades}}
+<div class="modal fade" id="exampleModal6{{id}}" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h1 class="modal-title fs-5" id="exampleModalLabel">{{titulo}}</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <h5>{{subtitulo}}</h5>
+                <p>{{cuerpo}}</p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+{{/each}}
+
 <!--inicio mapa y formulario-->
 <div id="conocenos" class="row py-4 scroll_section">
     <div class="col-md-4 offset-md-2">
