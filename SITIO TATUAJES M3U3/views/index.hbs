@@ -284,7 +284,7 @@
         <ul class="lista-novedades">
             {{#each novedades}}
             <li>
-                <a href="#" data-bs-toggle="modal" data-bs-target="#exampleModal6{{id}}"><img src="images/novedades.jpg">{{titulo}}</a>
+                <a href="javascript:void(0)" data-bs-toggle="modal" data-bs-target="#exampleModal6{{id}}"><img src="{{imagen}}">{{titulo}}</a>
             </li>
             {{/each}}
         </ul>
@@ -300,6 +300,7 @@
             </div>
             <div class="modal-body">
                 <h5>{{subtitulo}}</h5>
+                <img src="{{imagen}}">
                 <p>{{cuerpo}}</p>
             </div>
             <div class="modal-footer">
